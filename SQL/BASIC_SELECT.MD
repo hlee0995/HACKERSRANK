@@ -12,7 +12,9 @@ The STATION table is described as follows:
 | POPULATION | NUMBER |
 
 SELECT DISTINCT CITY
+
 FROM STATION
+
 WHERE mod(id,2) = 0;
 
 
