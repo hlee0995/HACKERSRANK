@@ -55,5 +55,51 @@ WHERE CITY Like '[AEIOU]%';
 | NAME  |STR  |
 | MARKS | INT |
 
+Q5, Query the Name of any student in STUDENTS who scored higher than  Marks. Order your output by the last three characters of each name. If two or more students both have names ending in the same last three characters (i.e.: Bobby, Robby, etc.), secondary sort them by ascending ID.
+
+SELECT name
+from students
+where marks > 75
+ORDER BY RIGht(name,3), ID ASC;
+
+
+|  Field | Type |
+|-------|-----|
+| Column  | Type |
+| Employee_id | INT   |
+| name  |STR  |
+| months | INT |
+| salary | INT |
+
+Q6, Write a query that prints a list of employee names (i.e.: the name attribute) from the Employee table in alphabetical order.
+
+SELECT name
+FROM employee
+ORDER BY name ASC;]
+
+
+|  Field | Type |
+|-------|-----|
+| Column  | Type |
+| city | VARChaR(21)   |
+| state  | VARCHAR(2)  |
+| LAT_N       | NUMERIC |
+| LONG_W      | NUMERIC |
+
+
+Q7, Query the Western Longitude (LONG_W)where the smallest Northern Latitude (LAT_N) in STATION is greater than . Round your answer to  decimal places.
+
+SELECT round(long_w,4)
+FROM station
+WHERE lat_n = (SELECT Min(lat_n) from station where lat_n > 38.7780);
+
+or 
+
+SELECT round(long_w,4)
+FROM station
+WHERE lat_n >38.7780
+ORDER by lat_n asc
+limit 1;
+
 
 
