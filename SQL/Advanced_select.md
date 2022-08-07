@@ -1,4 +1,3 @@
-|  Field | Type |
 |-------|-----|
 | Column  | Type |
 | A | INT   |
