@@ -17,5 +17,5 @@ Case
     WHEN A = B AND B = C THEN 'Equilateral'
     WHEN A = B OR B = C or A = C THEN 'Isosceles'
     ELSE 'Scalene'
-End as column
+End as Result
 from triangles;
