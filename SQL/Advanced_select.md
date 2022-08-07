@@ -1,5 +1,5 @@
+|  Column | Type |
 |-------|-----|
-| Column  | Type |
 | A | INT   |
 | B  | INT  |
 | C  | INT |
